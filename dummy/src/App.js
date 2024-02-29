@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
 
   const [text, setText] = useState("");
+
+  useEffect(() => {
+    console.log("UI rendering Done");
+  })
 
   function changeHandler(e) {
     console.log(text);
